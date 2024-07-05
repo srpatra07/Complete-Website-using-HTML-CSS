@@ -58,6 +58,7 @@ ul {
     max-width: 1180px;
     margin-inline: auto;
     padding-inline: var(--padding-inline-section);
+    overflow: hidden;
 }
 
 .flex {
@@ -136,6 +137,10 @@ ul {
     gap: 40px;
 }
 
+.nav-toggle {
+    display: none;
+}
+
 /* Header Section */
 
 header {
@@ -156,7 +161,7 @@ header {
 }
 
 .header-right img {
-    width: 600px;
+    width: 100%;
 }
 
 .get-started-btn {
@@ -172,7 +177,8 @@ header {
 }
 
 .logos {
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 
 .logo {
@@ -190,6 +196,7 @@ header {
 
 .features-header {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .features-header h2 {
@@ -199,7 +206,7 @@ header {
 .features-area {
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
     margin-top: 30px;
 }
 
@@ -219,6 +226,10 @@ header {
     gap: 30px;
 }
 
+#second-big-feature {
+    flex-direction: row-reverse;
+}
+
 .feature-img img {
     width: 100%;
 }
@@ -230,6 +241,10 @@ header {
 
 /* Examples section */
 
+.example-section {
+    padding: 80px var(--padding-inline-section) ;
+}
+
 .examples-header {
     flex-direction: column;
     gap: 20px;
@@ -239,12 +254,13 @@ header {
     justify-content: space-between;
     margin-top: 25px;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
 .examples-card {
     width: 23%;
     position: relative;
-    min-height: 300px;
+    height: 300px;
     background: black;
 }
 
@@ -263,6 +279,11 @@ header {
 
 /* Cta section */
 
+.cta-section {
+    background-color: var(--primary-text-color);
+    padding: 120px var(--padding-inline-section) 80px;
+}
+
 .cta-section-container {
     flex-direction: column;
     color: white;
@@ -274,10 +295,6 @@ header {
     color: white;
 }
 
-.cta-section {
-    background-color: var(--primary-text-color);
-    padding: 120px var(--padding-inline-section) 80px;
-}
 
 /* Footer section */
 
@@ -302,4 +319,5 @@ footer {
     gap: 30px;
     padding: 10px;
     background-color: #b9cde4;
+    flex-wrap: wrap;
 }
